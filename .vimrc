@@ -13,6 +13,8 @@ let g:mapleader=','
 nmap <leader>w :w!<cr>
 
 " ### Interface
+set relativenumber
+
 " Always show current positon
 set ruler
 
@@ -22,6 +24,9 @@ set cmdheight=2
 " Show matching brackets wehn cursor is over them
 set showmatch
 set mat=2
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 
 " Stop error visual indications and sounds
 set noerrorbells
